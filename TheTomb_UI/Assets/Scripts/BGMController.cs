@@ -8,7 +8,7 @@ public class BGMController : MonoBehaviour
     [SerializeField]
     AudioSource audioSource;
 
-    bool isMuted = false;
+    //bool isMuted = false;
     // Start is called before the first frame update
     private void Awake()
     {

@@ -9,6 +9,7 @@ public class ExitButton : MonoBehaviour
     public void OnClickExit()
     {
         ExitTarget.SetActive(false);
+        if(ExitPopUp != null)
         ExitPopUp.SetActive(false);
     }
 

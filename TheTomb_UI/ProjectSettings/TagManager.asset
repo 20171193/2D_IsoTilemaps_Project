@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - TilemapCollider
+  - Ground
+  - Controllable
+  - GuardianTile
   layers:
   - Default
   - TransparentFX
@@ -11,10 +15,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - PauseButton
+  - PauseBackGround
+  - InfoButton
+  - InfoBackGround
   - 
   - 
   - 
@@ -40,4 +44,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: PauseBackGround
+    uniqueID: 2825739573
+    locked: 0
+  - name: PauseButton
+    uniqueID: 3544014621
+    locked: 0
+  - name: InfoBackGround
+    uniqueID: 923802421
+    locked: 0
+  - name: InfoButton
+    uniqueID: 3567043353
     locked: 0
