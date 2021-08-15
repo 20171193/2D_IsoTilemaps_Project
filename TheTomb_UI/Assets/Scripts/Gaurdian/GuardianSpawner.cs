@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class GuardianSpawner : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject guardianPrefab;
-
-    public void SpawnGuardian(Transform tileTransform)
+    public void SpawnGuardian(Transform tileTransform, GameObject guardianPrefab)
     {
         Instantiate(guardianPrefab, tileTransform.position, Quaternion.identity);
     }

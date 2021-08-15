@@ -19,8 +19,8 @@ TagManager:
   - PauseBackGround
   - InfoButton
   - InfoBackGround
-  - 
-  - 
+  - Deployable
+  - InDeployable
   - 
   - 
   - 
