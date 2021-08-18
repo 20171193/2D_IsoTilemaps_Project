@@ -31,6 +31,8 @@ public class DeploymentGuardian : MonoBehaviour
     [HideInInspector]
     public GameObject deployPrefab;  // 배치할 가디언의 프리팹을 받아올 변수
 
+    public GameObject curObject;   // 현재 클릭한 오브젝트
+
     private void Awake()
     {
         mainCamera = Camera.main;
@@ -54,6 +56,7 @@ public class DeploymentGuardian : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity,layerMask))
             {
+                // 배치 가능한 가디언타일 클릭 시 
                 if (hit.transform.CompareTag("GuardianTile"))
                 {
                     guardianSpawner.SpawnGuardian(hit.transform, deployPrefab);
@@ -72,7 +75,6 @@ public class DeploymentGuardian : MonoBehaviour
                     hit.transform.gameObject.layer = 11;
                     deployTile.SetActive(true);
 
-                    camera.isDeploy = false;
                     // 배치 후 다른 기능들 활성화/비 활성화
                     for (int i = 0; i < onObjects.Length; i++)
                     {
@@ -83,6 +85,8 @@ public class DeploymentGuardian : MonoBehaviour
                         offObjects[i].SetActive(false);
                     }
 
+                    Transform clickEvent = curObject.transform.Find("ClickEvent");
+                    clickEvent.gameObject.SetActive(false);
                 }
             }
         }

@@ -32,8 +32,8 @@ public class BasicCameraFollow : MonoBehaviour
 		}
 		else
         {
-			transform.position = new Vector3(0,0,-5);
-			mainCamera.orthographicSize = 6.5f;
+			transform.position = new Vector3(5,0,-5);
+			mainCamera.orthographicSize = 7;
         }
 	}
 }

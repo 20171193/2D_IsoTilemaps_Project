@@ -24,9 +24,9 @@ public class VirualJoystick : MonoBehaviour, /*IBeginDragHandler,*/ IDragHandler
 
     private void Awake()
     {
-        // 초기 조이패드 위치 저장
-        joyStickFirstPosition = joypad.transform.position;
         rectTransform = GetComponent<RectTransform>();
+        // 초기 조이패드 위치 저장
+        joyStickFirstPosition = rectTransform.position;
     }
     private void Update()
     {
